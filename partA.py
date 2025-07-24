@@ -14,7 +14,7 @@ frame_width = int(vid.get(cv2.CAP_PROP_FRAME_WIDTH))
 frame_height = int(vid.get(cv2.CAP_PROP_FRAME_HEIGHT))
 fps = vid.get(cv2.CAP_PROP_FPS)
 
-out = cv2.VideoWriter('resources/Output/PART_A_processed_video.avi',
+out = cv2.VideoWriter('resources/PART_A_processed_video.avi',
                       cv2.VideoWriter_fourcc(*'MJPG'),
                       fps,
                       (frame_width, frame_height))
