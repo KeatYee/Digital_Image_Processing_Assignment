@@ -213,25 +213,25 @@ def main():
                    extract_paragraph("resources/Converted_Paper/001.png")
                    break
                 case 2:
-                    extract_paragraph("resources/Converted_Paper/002.png)
+                    extract_paragraph("resources/Converted_Paper/002.png")
                     break
                 case 3:
-                    extract_paragraph(""resources/Converted_Paper/003.png"")
+                    extract_paragraph("resources/Converted_Paper/003.png")
                     break
                 case 4:
-                    extract_paragraph(""resources/Converted_Paper/004.png"",0.3)
+                    extract_paragraph("resources/Converted_Paper/004.png",0.3)
                     break
                 case 5:
-                   extract_paragraph(""resources/Converted_Paper/005.png"")
+                   extract_paragraph("resources/Converted_Paper/005.png")
                    break
                 case 6:
-                    extract_paragraph(""resources/Converted_Paper/006.png"")
+                    extract_paragraph("resources/Converted_Paper/006.png")
                     break
                 case 7:
-                    extract_paragraph(""resources/Converted_Paper/007.png"")
+                    extract_paragraph("resources/Converted_Paper/007.png")
                     break
                 case 8:
-                    extract_paragraph(""resources/Converted_Paper/008.png"",0.3)
+                    extract_paragraph("resources/Converted_Paper/008.png",0.3)
                     break
                 case _:
                     print("Choose an integer between 1-8")
