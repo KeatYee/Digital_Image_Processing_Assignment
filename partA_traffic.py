@@ -75,7 +75,7 @@ for frame_count in range(total_no_frames):
         x1, y1 = margin_x, margin_y
         x2, y2 = x1 + pip_width, y1 + pip_height
 
-        
+        # Draws a black rectangle on the frame
         cv2.rectangle(frame, (x1-3, y1-3), (x2+3, y2+3), (0,0,0), thickness=6)
         
         frame[y1:y2, x1:x2] = talking_resized
