@@ -24,7 +24,7 @@ out = cv2.VideoWriter('resources/PART_A_Singapore_Video.avi',
                       (frame_width, frame_height))
 
 # Load Haar cascade for face detection
-face_cascade = cv2.CascadeClassifier('face_detector.xml')
+face_cascade = cv2.CascadeClassifier('resources/face_detector.xml')
 if face_cascade.empty():
     print("Error: Failed to load face detector.")
     exit()
@@ -102,6 +102,7 @@ vid.release()
 talking_vid.release()
 out.release()
 print("video office processed")
+
 
 
 
