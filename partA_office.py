@@ -2,9 +2,9 @@ import cv2
 import numpy as np
 
 # Load main video, talking video (PIP), and endscreen video
-vid = cv2.VideoCapture('office.mp4')
-talking_vid = cv2.VideoCapture('talking.mp4')
-end_vid = cv2.VideoCapture('endscreen.mp4')
+vid = cv2.VideoCapture("resources/office.mp4")
+talking_vid = cv2.VideoCapture("resources/talking.mp4")
+end_vid = cv2.VideoCapture("resources/endscreen.mp4")
 
 # Check if main video opened successfully
 if not vid.isOpened():
@@ -18,20 +18,20 @@ frame_height = int(vid.get(cv2.CAP_PROP_FRAME_HEIGHT))
 fps = vid.get(cv2.CAP_PROP_FPS) 
 
 # Create a video writer to save the processed video
-out = cv2.VideoWriter('PART_A_Office_Video.avi',
+out = cv2.VideoWriter("resources/PART_A_Office_Video.avi",
                       cv2.VideoWriter_fourcc(*'MJPG'),
                       fps,
                       (frame_width, frame_height))
 
 # Load Haar cascade for face detection
-face_cascade = cv2.CascadeClassifier('face_detector.xml')
+face_cascade = cv2.CascadeClassifier("resources/face_detector.xml")
 if face_cascade.empty():
     print("Error: Failed to load face detector.")
     exit()
     
 # Load watermark images
-wm1 = cv2.imread('watermark1.png', cv2.IMREAD_UNCHANGED)
-wm2 = cv2.imread('watermark2.png', cv2.IMREAD_UNCHANGED)
+wm1 = cv2.imread('resources/watermark1.png', cv2.IMREAD_UNCHANGED)
+wm2 = cv2.imread('resources/watermark2.png', cv2.IMREAD_UNCHANGED)
 
 # Function to overlay watermark
 def overlay_watermark(frame, watermark):
@@ -104,6 +104,7 @@ vid.release()
 talking_vid.release()
 out.release()
 print("video office processed")
+
 
 
 
