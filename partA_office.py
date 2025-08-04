@@ -16,7 +16,6 @@ total_no_frames = int(vid.get(cv2.CAP_PROP_FRAME_COUNT))
 frame_width = int(vid.get(cv2.CAP_PROP_FRAME_WIDTH))
 frame_height = int(vid.get(cv2.CAP_PROP_FRAME_HEIGHT))
 fps = vid.get(cv2.CAP_PROP_FPS) 
-fps = fps * 0.75
 
 # Create a video writer to save the processed video
 out = cv2.VideoWriter('PART_A_Office_Video.avi',
@@ -105,5 +104,6 @@ vid.release()
 talking_vid.release()
 out.release()
 print("video office processed")
+
 
 
