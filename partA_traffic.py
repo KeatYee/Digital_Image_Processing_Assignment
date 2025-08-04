@@ -70,8 +70,8 @@ for frame_count in range(total_no_frames):
         talking_resized = cv2.resize(talking_frame, (pip_width, pip_height))
         
         # Overlay talking video at top-left corner with margin
-        margin_x = 40
-        margin_y = 40
+        margin_x = 50
+        margin_y = 50
         x1, y1 = margin_x, margin_y
         x2, y2 = x1 + pip_width, y1 + pip_height
 
@@ -105,3 +105,4 @@ vid.release()
 talking_vid.release()
 out.release()
 print("video office processed")
+
