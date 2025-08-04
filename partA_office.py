@@ -55,6 +55,8 @@ for frame_count in range(total_no_frames):
     faces = face_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=5)
     
     for (x, y, w, h) in faces:
+        #cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
+        
         # Detect faces and blur them
         face_region = frame[y:y+h, x:x+w]
         blurred_face = cv2.GaussianBlur(face_region, (99, 99), 30)
@@ -75,9 +77,6 @@ for frame_count in range(total_no_frames):
         x1 = x2 - pip_width
         y1 = margin_y
         y2 = y1 + pip_height
-
-        # Draws a black rectangle on the frame
-        cv2.rectangle(frame, (x1-3, y1-3), (x2+3, y2+3), (0,0,0), thickness=6)
         
         frame[y1:y2, x1:x2] = talking_resized
 
@@ -106,4 +105,5 @@ vid.release()
 talking_vid.release()
 out.release()
 print("video office processed")
+
 
